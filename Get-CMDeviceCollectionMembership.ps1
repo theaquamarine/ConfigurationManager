@@ -8,6 +8,8 @@ function Get-CMDeviceCollectionMembership {
 
         PS XYZ:\> Get-CMDeviceCollectionMembership -ResourceId 12345678
         Gets the collections the device with ID 123465678 is a member of
+    .NOTES
+        'http://{0}/AdminService/v1.0/Device({1})/ResourceCollectionMembership?$expand=Collection&$select=Collection' -f $siteServer,$ResourceID
     #>
 
     [CmdletBinding(DefaultParameterSetName = 'ByName')]
